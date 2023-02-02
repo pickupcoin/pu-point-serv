@@ -1,0 +1,45 @@
+{
+	"name": "main",
+	"api": {
+		"enabled": true,
+		"netId": 1,
+		"AllowedOrigins": [
+			"http://127.0.0.1:8082"
+		],
+		"listen": "0.0.0.0:8080",
+		"AccessSecret": "dfas",
+
+		"rpcUrl": [
+			{
+				"name": "main",
+				"url": "http://127.0.0.1:8545",
+				"timeout": "10s"
+			},
+			{
+				"name": "backup",
+				"url": "http://127.0.0.2:8545",
+				"timeout": "10s"
+			}
+		]
+	},
+
+	"threads": 10,
+
+	"redis": {
+		"endpoint": "127.0.0.1:6379",
+		"poolSize": 10,
+		"database": 2,
+		"password": "password"
+	},
+
+	"mysql": {
+		"endpoint": "127.0.0.1",
+		"user": "root",
+		"password": "password",
+		"poolSize": 10,
+		"port": 3308,
+		"database": "point_db",
+		"LogTableName": "log"
+	},
+
+}
